@@ -198,7 +198,7 @@ export default {
         csv: 'CSV (逗号分隔)(*.csv)',
         html: '網頁(*.html)',
         xml: 'XML 文件(*.xml)',
-        txt: '文本文件(制表符分隔)(*.txt)',
+        txt: '文本文件()(*.txt)',
         xls: 'Excel 97-2003 工作簿(*.xls)',
         xlsx: 'Excel 工作簿(*.xlsx)',
         pdf: 'PDF (*.pdf)'

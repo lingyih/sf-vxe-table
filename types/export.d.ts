@@ -157,6 +157,10 @@ declare module './table' {
        * 可选文件类型列表
        */
       types?: string[]
+       /**
+       * 文本类型导出分割符
+       */
+      txtTypeSeparator?: string
       /**
        * 输出数据的方式
        */

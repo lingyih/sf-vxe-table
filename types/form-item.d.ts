@@ -180,6 +180,10 @@ export namespace VxeFormItemPropTypes {
  */
 export interface FormItemRenderOptions extends VxeGlobalRendererHandles.RenderOptions {
   /**
+   * 权限值
+   */
+  permission?: string
+  /**
    * 下拉选项列表（需要渲染器支持）
    */
   options?: any[]

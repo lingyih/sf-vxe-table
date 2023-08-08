@@ -2205,6 +2205,14 @@ export namespace VxeTablePropTypes {
      */
     autoClear?: boolean
     /**
+      * 自动添加下一个
+    */
+    addNextLine?: boolean
+    /**
+      * 自定义添加方法
+    */
+    addMethod?(): void
+    /**
      * 该方法的返回值用来决定该单元格是否允许编辑
      */
     beforeEditMethod?(params: {

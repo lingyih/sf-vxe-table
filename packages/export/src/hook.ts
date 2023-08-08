@@ -499,18 +499,19 @@ const tableExportHook: VxeGlobalHooksHandles.HookOptions = {
     }
 
     const toTxt = (opts: any, columns: any[], datas: any[]) => {
+      const { txtTypeSeparator = '\t' } = opts
       let content = ''
       if (opts.isHeader) {
-        content += columns.map((column) => toTxtCellLabel(getHeaderTitle(opts, column))).join('\t') + enterSymbol
+        content += columns.map((column) => toTxtCellLabel(getHeaderTitle(opts, column))).join(txtTypeSeparator) + enterSymbol
       }
       datas.forEach((row) => {
-        content += columns.map((column) => toTxtCellLabel(row[column.id])).join('\t') + enterSymbol
+        content += columns.map((column) => toTxtCellLabel(row[column.id])).join(txtTypeSeparator) + enterSymbol
       })
       if (opts.isFooter) {
         const { footerTableData } = reactData
         const footers = getFooterData(opts, footerTableData)
         footers.forEach((rows: any) => {
-          content += columns.map((column: any) => toTxtCellLabel(getFooterCellValue(opts, rows, column))).join(',') + enterSymbol
+          content += columns.map((column: any) => toTxtCellLabel(getFooterCellValue(opts, rows, column))).join(txtTypeSeparator) + enterSymbol
         })
       }
       return content
